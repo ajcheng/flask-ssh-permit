@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}提交权限申请{% endblock %}
+
+{% block head %}请确保提交准确用户名/机器名{% endblock %}
+
+{% block main %}
+    <h3 class="page-title">目前仅提供duoduo权限申请</h3>
+    <p>使用中有任何问题，联系我</p>
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">请输入用户名</label>
+        <input type="text" class="form-control" name="account" placeholder="以邮件前缀为准，如chengaj">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">请输入机器地址</label>
+          <input type="text" class="form-control" name="host" placeholder="完整名称，如web005.mx">
+      </div>
+        <div class="form-group">
+        <label for="exampleInputPassword2">请输入申请原因</label>
+          <textarea name="content" rows="5" placeholder="申请原因如实填写，如系统异常，需要临时查看日志权限" style="margin: 0px; width: 728px; height: 306px;"></textarea>
+
+      </div>
+      <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+{% endblock %}

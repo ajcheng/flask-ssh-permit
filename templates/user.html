@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}权限申请系统-用户中心{% endblock %}
+{% block main %}
+    <h3 class="page-title">用户中心</h3>
+    {% for authorith in authoriths %}
+    <div class="panel panel-primary">
+        <p><span>用户账户：{{ authorith.account }}</span></p>
+        <p><span>线上机器：{{ authorith.host }}</span></p>
+        <p><span>申请用途：{{ authorith.content }}</span></p>
+        <p><span>申请时间：{{ authorith.create_time }}</span></p>
+    </div>
+    <hr>
+    {% endfor %}
+
+{% endblock %}
